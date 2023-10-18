@@ -1,18 +1,22 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Register = () => {
     const [regError, setRegError]= useState('');
-    const {createUser}= useContext(AuthContext);
+    const {createUser, updateUser, setUser}= useContext(AuthContext);
+    //redirect user to login page after registration
+    const navigate= useNavigate();
 
     const handleRegister=event=>{
         event.preventDefault();
         const form= event.target;
         const name= form.name.value;
+        const photo= form.photo.value;
         const email= form.email.value;
         const password= form.password.value;
+
 
         //Resetting Reg error 
         setRegError('');
@@ -33,10 +37,19 @@ const Register = () => {
         //create user 
         createUser(email, password)
         .then(result=>{
-            console.log(result.user)
+            //update profile
+            updateUser(name,photo)
+            .then(()=>{
+                console.log('profile updated');   
+                setUser(null);
+                navigate('/login');
+            })
+            .catch(error=>{
+                setRegError(error.message);
+            })
         })
         .catch(error=>{
-            console.log(error.message);
+            setRegError(error.message);
         })
     }
     return (
@@ -48,6 +61,9 @@ const Register = () => {
                             <h1 className="text-3xl font-bold text-center mb-4">Register</h1>
                             <div className="form-control">                                
                                 <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">                                
+                                <input type="text" name="photo" placeholder="Profile Photo URL" className="input input-bordered" required />
                             </div>
                             <div className="form-control">                                
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
