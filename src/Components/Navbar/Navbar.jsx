@@ -15,6 +15,7 @@ const Navbar = () => {
         <Link className="btn" to='/login'>Login</Link>
         <Link className="btn" to='/register'>Register</Link>
         <Link className="btn" to='/brandEntry'>Brand Entry</Link>
+        <Link className="btn" to='/addPhone'>Add Phone</Link>
     </>
 
     return (
