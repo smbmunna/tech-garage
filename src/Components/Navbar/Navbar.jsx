@@ -11,9 +11,10 @@ const Navbar = () => {
         .catch(error=>{console.log(error.message)})
     }
     const links = <>
-        <Link to='/'>Home</Link>
-        <Link to='/login'>Login</Link>
-        <Link to='/register'>Register</Link>
+        <Link className="btn" to='/'>Home</Link>
+        <Link className="btn" to='/login'>Login</Link>
+        <Link className="btn" to='/register'>Register</Link>
+        <Link className="btn" to='/brandEntry'>Brand Entry</Link>
     </>
 
     return (
