@@ -1,15 +1,15 @@
-import { useContext } from "react";
 import Header from "../../Components/Header/Header";
-import { AuthContext } from "../../Providers/AuthProvider";
+import Brands from "../../Components/Brands/Brands";
 
 
 const Home = () => {
-    const {user}= useContext(AuthContext);
-    console.log(user)
     return (
         <div>
-            <Header/>
-            <h1 className="text-2xl font-bold">Home Page </h1>            
+            <Header />
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-2xl font-bold text-center my-10">Home Page </h1>
+                <Brands />
+            </div>
         </div>
     );
 };
