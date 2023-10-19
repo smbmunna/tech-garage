@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  [class^="number-slide"],
+  [class*=" number-slide"] {
+    background: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    height: 550px;
+    max-height: 100vh;    
+  }
+  
+  .number-slide1 {
+    background-image: url('https://i.ibb.co/Fg0JxzV/slider-2.jpg');
+    background-repeat: no-repeat;    
+    background-size: cover;
+  }
+  
+  .number-slide2 {
+    background-image: url('https://i.ibb.co/0FBHSQ8/slider-3.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background: linear-gradient(
+      128deg,
+      rgba(255, 154, 63, 1) 0%,
+      rgba(255, 75, 64, 1) 100%
+    ); */
+  }
+  
+  .number-slide3 {
+   
+    background-image: url('https://i.ibb.co/NNTzmYw/ezgif-com-webp-to-jpg.jpg');
+    background-position: center;
+    background-size: cover;
+    
+  }
+  .number-slide4 {
+   
+    background-image: url('https://i.ibb.co/s62Cyjx/ezgif-com-webp-to-jpg-1.jpg');
+    background-position: center;
+    background-size: cover;
+    
+  }
+  @media only screen and (max-width: 576px){
+    [class*=" number-slide"] {
+      height: 300px;
+      font-size: 25px;
+    }
+  } 
+
+  /* tablet */
+  @media only screen and (max-width: 768px){
+    [class*=" number-slide"] {
+      height: 350px;
+      font-size: 25px;
+    }
+  } 
