@@ -1,13 +1,14 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FcGoogle } from 'react-icons/fc';
 
 
 const Login = () => {
-    const [loginError, setLoginError]= useState('');
-    const { loginUser } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState('');
+    const { loginUser, googleLogin } = useContext(AuthContext);
     //redirect to homepage after login
-    const navigate= useNavigate();
+    const navigate = useNavigate();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -16,12 +17,22 @@ const Login = () => {
         const password = form.password.value;
 
         //Resetting Login error 
-        setLoginError('');      
+        setLoginError('');
 
         loginUser(email, password)
             .then(result => {
                 console.log(result.user);
                 navigate('/');
+            })
+            .catch(error => {
+                setLoginError(error.message);
+            })
+    }
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                console.log(result.user.photoURL);
             })
             .catch(error => {
                 setLoginError(error.message);
@@ -48,6 +59,16 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-2">
                                 <button className="btn btn-primary">Login</button>
+                            </div>
+                            {/* Social Login */}
+                            <div className="flex">
+                                <div className="mx-auto">
+                                    <button
+                                        onClick={handleGoogleLogin}
+                                        className="btn btn-outline border-0">
+                                        <FcGoogle className="text-3xl" />  Google Login
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
