@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Details = () => {
     const product= useLoaderData();    
@@ -33,6 +33,7 @@ const Details = () => {
 
                 <button onClick={handleAddToCart} className="btn btn-primary mt-8">Add To Cart</button>
             </div>
+            <Link to='/myCart' className="btn btn-primary mt-4 ">My Cart</Link>
         </div>
     );
 };
