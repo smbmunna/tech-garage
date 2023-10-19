@@ -1,13 +1,13 @@
 import Header from "../../Components/Header/Header";
 import Brands from "../../Components/Brands/Brands";
+import Banner from "../../Components/Banner/Banner";
 
 
 const Home = () => {
     return (
-        <div>
-            <Header />
-            <div className="max-w-6xl mx-auto">
-                <h1 className="text-2xl font-bold text-center my-10">Home Page </h1>
+        <div className="">
+            <Banner className=""/>
+            <div className="max-w-6xl mx-auto">                
                 <Brands />
             </div>
         </div>

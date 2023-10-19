@@ -11,15 +11,15 @@ const Navbar = () => {
         .catch(error=>{console.log(error.message)})
     }
     const links = <>
-        <Link className="btn" to='/'>Home</Link>
-        <Link className="btn" to='/login'>Login</Link>
-        <Link className="btn" to='/register'>Register</Link>
-        <Link className="btn" to='/brandEntry'>Brand Entry</Link>
-        <Link className="btn" to='/addPhone'>Add Phone</Link>
+        <Link className="btn bg-slate-600 text-white" to='/'>Home</Link>
+        <Link className="btn bg-slate-600 text-white" to='/login'>Login</Link>
+        <Link className="btn bg-slate-600 text-white" to='/register'>Register</Link>
+        <Link className="btn bg-slate-600 text-white" to='/brandEntry'>Brand Entry</Link>
+        <Link className="btn bg-slate-600 text-white" to='/addPhone'>Add Phone</Link>
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100  bg-transparent fixed">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -29,10 +29,10 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Tech Garage</a>
+                <Link to='/'><img className="w-20" src="https://i.ibb.co/vLp2sMh/LOGO.png" alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 gap-2">
                     {links}
                 </ul>
             </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
                     <>
                         <img className="w-10 mr-2" src={user?.photoURL} alt="" />
                         <span className="mr-2">{user?.displayName}</span>
-                        <Link onClick={handleLogout} className="btn" to='/login'>Logout</Link>
+                        <Link onClick={handleLogout} className="btn bg-slate-600 text-white" to='/login'>Logout</Link>
                     </>
                 }
             </div>

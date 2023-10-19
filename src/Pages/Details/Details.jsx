@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Details = () => {
     const product= useLoaderData();    
@@ -14,7 +15,15 @@ const Details = () => {
             body: JSON.stringify(product)
         })
         .then(res=>res.json())
-        .then(data=> console.log(data))
+        .then(data=> {
+            if(data.insertedId){
+                Swal.fire(
+                    'Success!',
+                    'Product has been added to your Cart!',
+                    'success'
+                  )
+            }
+        })
     }
     return (
         <div className="lg:grid lg:grid-cols-2 w-1/2 mx-auto gap-10 items-center justify-between">
