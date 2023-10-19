@@ -9,7 +9,7 @@ const PhoneEntry = () => {
     const handleType = (e) => {
         setType(e.target.value);
     }
-    
+
     //Brand Dropdown
     const [brand, setBrand] = useState('');
     const handleBrand = (e) => {
@@ -26,15 +26,15 @@ const PhoneEntry = () => {
         const price = form.price.value;
         const sDescription = form.short_description.value;
         const rating = form.rating.value;
-        const announced= form.announced.value;
-        const display= form.display.value;
-        const os= form.os.value;
-        const ram= form.ram.value;
-        const camera= form.camera.value;
-        const battery= form.battery.value;
+        const announced = form.announced.value;
+        const display = form.display.value;
+        const os = form.os.value;
+        const ram = form.ram.value;
+        const camera = form.camera.value;
+        const battery = form.battery.value;
 
 
-        const product = { image, name, brand, type, price, sDescription, rating, announced,display,os, ram, camera,battery};
+        const product = { image, name, brand, type, price, sDescription, rating, announced, display, os, ram, camera, battery };
         fetch('http://localhost:5000/products', {
             method: "POST",
             headers: {
@@ -74,7 +74,7 @@ const PhoneEntry = () => {
                                 <select className="form-control" value={type} onChange={handleType}>
                                     <option value="">Selete Product Type</option>
                                     {
-                                        types.map(type=><option key={type.id} value={type.name}>{type.name}</option>)
+                                        types.map(type => <option key={type.id} value={type.name}>{type.name}</option>)
                                     }
                                 </select>
                             </div>
