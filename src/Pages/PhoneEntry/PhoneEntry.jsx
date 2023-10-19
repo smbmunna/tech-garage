@@ -26,8 +26,15 @@ const PhoneEntry = () => {
         const price = form.price.value;
         const sDescription = form.short_description.value;
         const rating = form.rating.value;
+        const announced= form.announced.value;
+        const display= form.display.value;
+        const os= form.os.value;
+        const ram= form.ram.value;
+        const camera= form.camera.value;
+        const battery= form.battery.value;
 
-        const product = { image, name, brand, type, price, sDescription, rating };
+
+        const product = { image, name, brand, type, price, sDescription, rating, announced,display,os, ram, camera,battery};
         fetch('http://localhost:5000/products', {
             method: "POST",
             headers: {
@@ -79,6 +86,25 @@ const PhoneEntry = () => {
                             </div>
                             <div className="form-control">
                                 <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
+                            </div>
+
+                            <div className="form-control">
+                                <input type="text" name="announced" placeholder="Announcement Date" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="text" name="display" placeholder="Display" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="text" name="os" placeholder="Operating System" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="text" name="ram" placeholder="RAM" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="text" name="camera" placeholder="Camera" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="text" name="battery" placeholder="Battery" className="input input-bordered" required />
                             </div>
                             <div>
                                 <p className="text-red-700">{ }</p>

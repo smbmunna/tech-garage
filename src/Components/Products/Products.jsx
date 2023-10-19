@@ -2,8 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Product from "../Product/Product";
 
 const Products = () => {
-    const products = useLoaderData();
-    console.log(products);
+    const products = useLoaderData();    
     //get the brand name
     const { brand } = useParams();
 
