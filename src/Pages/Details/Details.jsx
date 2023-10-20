@@ -26,11 +26,11 @@ const Details = () => {
         })
     }
     return (
-        <div className="lg:grid lg:grid-cols-2 w-1/2 mx-auto gap-10 items-center justify-between">
+        <div className="lg:grid lg:grid-cols-2 w-1/2 mx-auto gap-10 items-center justify-between mt-20">
             <div>
                 <img src={image} alt="" />
             </div>
-            <div>
+            <div className="text-white">
                 <h1 className="text-3xl font-bold">{name}</h1>
                 <p className="mt-10">{sDescription}</p>
                 <p>Announcement: {announced}</p>
@@ -40,9 +40,9 @@ const Details = () => {
                 <p>Camera: {camera}</p>
                 <p>Battery: {battery}</p>
 
-                <button onClick={handleAddToCart} className="btn btn-primary mt-8">Add To Cart</button>
+                <button onClick={handleAddToCart} className="btn btn-primary bg-[#2c2c2c91] rounded-none  mt-8">Add To Cart</button>
             </div>
-            <Link to='/myCart' className="btn btn-primary mt-4 ">My Cart</Link>
+            <Link to='/myCart' className="btn btn-primary bg-[#2c2c2c91] rounded-none mt-4 ">My Cart</Link>
         </div>
     );
 };

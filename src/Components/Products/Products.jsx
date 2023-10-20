@@ -10,7 +10,7 @@ const Products = () => {
     return (
         <div className="max-w-6xl mx-auto">
             <Slider/>
-            <h1 className="text-2xl font-bold text-center">{brand} Products</h1>
+            <h1 className="text-3xl font-bold text-center text-white my-10">{brand} Products</h1>
             {/* <div className="md:grid md:grid-cols-3 lg:grid-cols-3 justify-center gap-10 mx-auto"> */}
             <div className="lg:grid lg:grid-cols-2 items-center gap-10 mx-auto w-4/5">
                 {

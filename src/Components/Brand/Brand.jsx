@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Brand = ({brand}) => {
     const {name, photo, _id}= brand;
     return (
-        <Link to={`/brand/${name}`} className="card bg-[#2c2c2c91]  w-48 shadow-xl flex mb-6">
+        <Link to={`/brand/${name}`} className="card bg-[#2c2c2c91]  rounded-none  w-48 shadow-xl flex mb-6">
             <figure className="px-10 pt-10">
                 <img className="w-24" src={photo} />
             </figure>

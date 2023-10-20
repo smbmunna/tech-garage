@@ -1,25 +1,25 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
     const { user, logout } = useContext(AuthContext);
-    
-    const handleLogout=()=>{
+
+    const handleLogout = () => {
         logout()
-        .then(()=>console.log('user logged out'))
-        .catch(error=>{console.log(error.message)})
+            .then(() => console.log('user logged out'))
+            .catch(error => { console.log(error.message) })
     }
     const links = <>
-        <Link className="btn bg-[#2c2c2c91] text-white" to='/'>Home</Link>
-        <Link className="btn bg-[#2c2c2c91] text-white" to='/login'>Login</Link>
-        <Link className="btn bg-[#2c2c2c91] text-white" to='/register'>Register</Link>
-        <Link className="btn bg-[#2c2c2c91] text-white" to='/brandEntry'>Brand Entry</Link>
-        <Link className="btn bg-[#2c2c2c91] text-white" to='/addPhone'>Add Phone</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/'>Home</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Login</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/register'>Register</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/addPhone'>Add Phone</Link>
     </>
 
     return (
-        <div className="navbar bg-base-100  bg-[#2c2c2c91] sticky top-0">
+        <div className="navbar  bg-[#2c2c2c91] sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -40,10 +40,10 @@ const Navbar = () => {
                 {user &&
                     <>
                         <img className="w-10 mr-2" src={user?.photoURL} alt="" />
-                        <span className="mr-2">{user?.displayName}</span>
-                        <Link onClick={handleLogout} className="btn bg-slate-600 text-white" to='/login'>Logout</Link>
+                        <span className="mr-2 text-white dark:text-black">{user?.displayName}</span>
+                        <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Logout</Link>
                     </>
-                }
+                }                
             </div>
         </div>
     );
