@@ -11,15 +11,15 @@ const Navbar = () => {
         .catch(error=>{console.log(error.message)})
     }
     const links = <>
-        <Link className="btn bg-slate-600 text-white" to='/'>Home</Link>
-        <Link className="btn bg-slate-600 text-white" to='/login'>Login</Link>
-        <Link className="btn bg-slate-600 text-white" to='/register'>Register</Link>
-        <Link className="btn bg-slate-600 text-white" to='/brandEntry'>Brand Entry</Link>
-        <Link className="btn bg-slate-600 text-white" to='/addPhone'>Add Phone</Link>
+        <Link className="btn bg-[#2c2c2c91] text-white" to='/'>Home</Link>
+        <Link className="btn bg-[#2c2c2c91] text-white" to='/login'>Login</Link>
+        <Link className="btn bg-[#2c2c2c91] text-white" to='/register'>Register</Link>
+        <Link className="btn bg-[#2c2c2c91] text-white" to='/brandEntry'>Brand Entry</Link>
+        <Link className="btn bg-[#2c2c2c91] text-white" to='/addPhone'>Add Phone</Link>
     </>
 
     return (
-        <div className="navbar bg-base-100  bg-transparent sticky top-0">
+        <div className="navbar bg-base-100  bg-[#2c2c2c91] sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

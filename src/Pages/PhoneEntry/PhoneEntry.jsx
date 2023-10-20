@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { ProductContext } from "../../Providers/ProductProvider";
+import Swal from "sweetalert2";
 
 const PhoneEntry = () => {
     const { brands, types } = useContext(ProductContext);
@@ -44,7 +45,13 @@ const PhoneEntry = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if(data.insertedId){
+                    Swal.fire(
+                        'Success!',
+                        'Product has been added to your Cart!',
+                        'success'
+                      )
+                }
             })
     }
     return (
