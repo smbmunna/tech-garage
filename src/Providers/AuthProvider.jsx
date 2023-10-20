@@ -10,19 +10,26 @@ const googleProvider= new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    
+    //show loader
+    const [loading, setLoading]= useState(true);
+
     //Observe current user
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
+            setLoading(false);
         })
         return unsubscribe;
     }, [])
     //create user
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
     //update userinfo
     const updateUser = (name, photo) => {
+        setLoading(true);
         return updateProfile(auth.currentUser, {
             displayName: name,
             photoURL: photo
@@ -30,14 +37,17 @@ const AuthProvider = ({ children }) => {
     }
     //sign in user
     const loginUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
     //Google login
     const googleLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
     //logout user
     const logout = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -49,6 +59,7 @@ const AuthProvider = ({ children }) => {
         googleLogin,
         updateUser,
         logout,
+        loading,
     }
 
     return (
