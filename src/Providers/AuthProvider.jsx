@@ -10,6 +10,8 @@ const googleProvider= new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+
+    const [reload, setReload]= useState(null);
     
     //show loader
     const [loading, setLoading]= useState(true);
@@ -21,7 +23,7 @@ const AuthProvider = ({ children }) => {
             setLoading(false);
         })
         return unsubscribe;
-    }, [])
+    }, [reload])
     //create user
     const createUser = (email, password) => {
         setLoading(true);
@@ -60,6 +62,7 @@ const AuthProvider = ({ children }) => {
         updateUser,
         logout,
         loading,
+        setReload,
     }
 
     return (

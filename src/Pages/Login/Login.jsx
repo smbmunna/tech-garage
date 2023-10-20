@@ -7,7 +7,7 @@ import './Login.css'
 
 const Login = () => {
     const [loginError, setLoginError] = useState('');
-    const { loginUser, googleLogin } = useContext(AuthContext);
+    const { loginUser, googleLogin, setReload } = useContext(AuthContext);
     //redirect to homepage after login
     const navigate = useNavigate();
     const location= useLocation();
@@ -23,6 +23,7 @@ const Login = () => {
 
         loginUser(email, password)
             .then(() => {
+                setReload(true);
                 //console.log(result.user);
                 //redirecting to desired page after login
                 navigate(location.state ? location.state : '/' );

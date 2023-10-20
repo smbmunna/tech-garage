@@ -1,32 +1,40 @@
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import {ProductContext} from "../../Providers/ProductProvider"
 
 const Navbar = () => {
-    const { user, logout } = useContext(AuthContext);
+    const { user, logout} = useContext(AuthContext);
+    const { handleThemeSwitch}= useContext(ProductContext)
 
     const handleLogout = () => {
         logout()
             .then(() => console.log('user logged out'))
             .catch(error => { console.log(error.message) })
     }
+
+    //handle switch
+    const changeTheme=()=>{
+        handleThemeSwitch();
+    }
+
     const links = <>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/'>Home</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/'>Home</Link>
         {
             !user &&
             <>
-                <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Login</Link>
-                <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/register'>Register</Link>
+                <Link className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/login'>Login</Link>
+                <Link className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/register'>Register</Link>
             </>
         }
-        <Link className="btn btn-primary bg-[#2c2c2cd0] rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/addProduct'>Add Product</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/myCart'>My Cart</Link>
+        <Link className="btn btn-primary bg-[#2c2c2cd0] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/addProduct'>Add Product</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/myCart'>My Cart</Link>
 
     </>
 
     return (
-        <div className="navbar  bg-[#2c2c2cc4] sticky top-0">
+        <div className="navbar  bg-black dark:bg-white  sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost  lg:hidden">
@@ -47,8 +55,9 @@ const Navbar = () => {
                 {user &&
                     <>
                         <img className="w-10 mr-2" src={user?.photoURL} alt="" />
-                        <span className="mr-2 text-white dark:text-black">{user?.displayName}</span>
-                        <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Logout</Link>
+                        <span className="mr-2 dark:text-black text-white">{user?.displayName}</span>
+                        <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/login'>Logout</Link>
+                        <button onClick={changeTheme} className="btn ">Light</button>
                     </>
                 }
             </div>

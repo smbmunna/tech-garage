@@ -20,27 +20,29 @@ const ProductProvider = ({children}) => {
     ];
 
 
-    //Toggle theme
-    const [theme, setTheme]= useState("light");
+  
+    //theme switch
+    const [theme, setTheme]= useState('light');
 
     useEffect(()=>{
-        if(theme=="dark"){
+        if(theme =="dark"){
             document.documentElement.classList.add("dark");
         }else{
             document.documentElement.classList.remove("dark");
         }
-
     },[theme])
 
     const handleThemeSwitch=()=>{
-        setTheme(theme=="dark"?"light":"dark")
+        setTheme(theme == "dark" ? "light" : "dark");
     }
 
 
     const productInfo={
         brands,
         types,
-        handleThemeSwitch
+        handleThemeSwitch,
+        setTheme,
+        theme
     }
     return (
         <ProductContext.Provider value={productInfo}>
