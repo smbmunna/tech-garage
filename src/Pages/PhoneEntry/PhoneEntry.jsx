@@ -117,7 +117,7 @@ const PhoneEntry = () => {
                                 <p className="text-red-700">{ }</p>
                             </div>
                             <div className="form-control mt-2">
-                                <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white">Add Phone</button>
+                                <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white">Add Product</button>
                             </div>
                         </form>
                     </div>
