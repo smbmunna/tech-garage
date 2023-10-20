@@ -4,6 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 import { useContext } from "react";
 import { ProductContext } from "../../Providers/ProductProvider";
 import Featured from "../../Components/Featured/Featured";
+import Special from "../../Components/Special/Special";
 
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
             <div className="max-w-6xl mx-auto">                
                 <Brands />
                 <Featured/>
+                <Special/>
             </div>
         </div>
     );
