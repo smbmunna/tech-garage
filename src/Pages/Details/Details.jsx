@@ -26,7 +26,7 @@ const Details = () => {
         })
     }
     return (
-        <div className="lg:grid lg:grid-cols-2 w-1/2 mx-auto gap-10 items-center justify-between mt-20">
+        <div className="lg:grid lg:grid-cols-2 w-3/4 lg:w-1/2 mx-auto gap-10 items-center justify-between mt-20">
             <div>
                 <img src={image} alt="" />
             </div>
