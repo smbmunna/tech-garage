@@ -12,20 +12,27 @@ const Navbar = () => {
     }
     const links = <>
         <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/'>Home</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Login</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/register'>Register</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
+        {
+            !user &&
+            <>
+                <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Login</Link>
+                <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/register'>Register</Link>
+            </>
+        }
+        <Link className="btn btn-primary bg-[#2c2c2cd0] rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
         <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/addProduct'>Add Product</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/myCart'>My Cart</Link>
+
     </>
 
     return (
-        <div className="navbar  bg-[#2c2c2c91] sticky top-0">
+        <div className="navbar  bg-[#2c2c2cc4] sticky top-0">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    <label tabIndex={0} className="btn btn-ghost  lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="White"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 w-52">
                         {links}
                     </ul>
                 </div>
@@ -43,7 +50,7 @@ const Navbar = () => {
                         <span className="mr-2 text-white dark:text-black">{user?.displayName}</span>
                         <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Logout</Link>
                     </>
-                }                
+                }
             </div>
         </div>
     );

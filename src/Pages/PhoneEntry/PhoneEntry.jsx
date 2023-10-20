@@ -60,7 +60,7 @@ const PhoneEntry = () => {
                 <div className="hero-content w-full">
                     <div className="card w-full max-w-lg shadow-2xl  bg-[#2c2c2c91] rounded-none text-white">
                         <form onSubmit={handleAddPhone} className="card-body">
-                            <h1 className="text-3xl font-bold text-center mb-4">Add Phone</h1>
+                            <h1 className="text-3xl font-bold text-center mb-4">Add Product</h1>
                             <div className="form-control">
                                 <input type="text" name="photo" placeholder="Phone Image" className="input input-bordered  rounded-none text-black" required />
                             </div>
