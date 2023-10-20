@@ -5,7 +5,7 @@ export const ProductContext= createContext(null);
 const ProductProvider = ({children}) => {
     const [brands, setBrands]= useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/brands')
+        fetch('https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/brands')
         .then(res=>res.json())
         .then(data=>{
             setBrands(data);

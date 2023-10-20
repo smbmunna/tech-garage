@@ -36,7 +36,7 @@ const PhoneEntry = () => {
 
 
         const product = { image, name, brand, type, price, sDescription, rating, announced, display, os, ram, camera, battery };
-        fetch('http://localhost:5000/products', {
+        fetch('https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/products', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
