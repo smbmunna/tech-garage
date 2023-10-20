@@ -56,16 +56,16 @@ const PhoneEntry = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-transparen">
                 <div className="hero-content w-full">
-                    <div className="card w-full max-w-lg shadow-2xl bg-base-100">
+                    <div className="card w-full max-w-lg shadow-2xl  bg-[#2c2c2c91] rounded-none text-white">
                         <form onSubmit={handleAddPhone} className="card-body">
                             <h1 className="text-3xl font-bold text-center mb-4">Add Phone</h1>
                             <div className="form-control">
-                                <input type="text" name="photo" placeholder="Phone Image" className="input input-bordered" required />
+                                <input type="text" name="photo" placeholder="Phone Image" className="input input-bordered  rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Phone Name" className="input input-bordered" required />
+                                <input type="text" name="name" placeholder="Phone Name" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
                                 {/* <input type="text" name="brand" placeholder="Brand" className="input input-bordered" required /> */}
@@ -86,38 +86,38 @@ const PhoneEntry = () => {
                                 </select>
                             </div>
                             <div className="form-control">
-                                <input type="text" name="price" placeholder="Price" className="input input-bordered" required />
+                                <input type="text" name="price" placeholder="Price" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="short_description" placeholder="Short Description" className="input input-bordered" required />
+                                <input type="text" name="short_description" placeholder="Short Description" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered" required />
+                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered rounded-none text-black" required />
                             </div>
 
                             <div className="form-control">
-                                <input type="text" name="announced" placeholder="Announcement Date" className="input input-bordered" required />
+                                <input type="text" name="announced" placeholder="Announcement Date" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="display" placeholder="Display" className="input input-bordered" required />
+                                <input type="text" name="display" placeholder="Display" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="os" placeholder="Operating System" className="input input-bordered" required />
+                                <input type="text" name="os" placeholder="Operating System" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="ram" placeholder="RAM" className="input input-bordered" required />
+                                <input type="text" name="ram" placeholder="RAM" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="camera" placeholder="Camera" className="input input-bordered" required />
+                                <input type="text" name="camera" placeholder="Camera" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="battery" placeholder="Battery" className="input input-bordered" required />
+                                <input type="text" name="battery" placeholder="Battery" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div>
                                 <p className="text-red-700">{ }</p>
                             </div>
                             <div className="form-control mt-2">
-                                <button className="btn btn-primary">Add Phone</button>
+                                <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white">Add Phone</button>
                             </div>
                         </form>
                     </div>

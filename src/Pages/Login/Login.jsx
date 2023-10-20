@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { FcGoogle } from 'react-icons/fc';
+import './Login.css'
 
 
 const Login = () => {
@@ -9,6 +10,7 @@ const Login = () => {
     const { loginUser, googleLogin } = useContext(AuthContext);
     //redirect to homepage after login
     const navigate = useNavigate();
+    const location= useLocation();
 
     const handleLogin = event => {
         event.preventDefault();
@@ -20,9 +22,10 @@ const Login = () => {
         setLoginError('');
 
         loginUser(email, password)
-            .then(result => {
-                console.log(result.user);
-                navigate('/');
+            .then(() => {
+                //console.log(result.user);
+                //redirecting to desired page after login
+                navigate(location.state ? location.state : '/' );
             })
             .catch(error => {
                 setLoginError(error.message);
@@ -31,8 +34,9 @@ const Login = () => {
 
     const handleGoogleLogin = () => {
         googleLogin()
-            .then(result => {
-                console.log(result.user.photoURL);
+            .then(() => {
+                //redirecting to desired page after login
+                navigate(location.state ? location.state : '/' );
             })
             .catch(error => {
                 setLoginError(error.message);
@@ -40,16 +44,16 @@ const Login = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-transparent">
                 <div className="hero-content">
-                    <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card w-full max-w-sm shadow-2xl bg-[#2c2c2c91] rounded-none text-white">
                         <form onSubmit={handleLogin} className="card-body">
                             <h1 className="text-3xl font-bold text-center mb-4">Login</h1>
                             <div className="form-control">
-                                <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                                <input type="email" name="email" placeholder="email" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                                <input type="password" name="password" placeholder="password" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control mt-2 text-sm">
                                 <p>Don't have Account? <Link className="font-bold text-blue-500" to="/register">Register</Link></p>
@@ -58,14 +62,14 @@ const Login = () => {
                                 <p className="text-red-700">{loginError}</p>
                             </div>
                             <div className="form-control mt-2">
-                                <button className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white ">Login</button>
                             </div>
                             {/* Social Login */}
                             <div className="flex">
                                 <div className="mx-auto">
                                     <button
                                         onClick={handleGoogleLogin}
-                                        className="btn btn-outline border-0">
+                                        className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white">
                                         <FcGoogle className="text-3xl" />  Google Login
                                     </button>
                                 </div>

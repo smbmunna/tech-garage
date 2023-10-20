@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-const CartItem = ({ product }) => {
-    const { _id, name, image, price, sDescription } = product;
+const CartItem = ({ product, cartItems, setCartItems }) => {
+    const { _id, name, image, price, sDescription, } = product;
     //delete from cart
     const handleDeleteFromCart = (id) => {
         fetch(`http://localhost:5000/delete/cart/${id}`, {
@@ -9,7 +9,16 @@ const CartItem = ({ product }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.deletedCount > 0) {
+                    Swal.fire(
+                        'Success!',
+                        'Product has been Removed From Your Cart!',
+                        'success'
+                    )
+                    const remainingItems = cartItems.filter(item => item._id != _id);
+                    setCartItems(remainingItems);;
+                }
+
             })
     }
     return (

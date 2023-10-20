@@ -20,22 +20,22 @@ const BrandEntry = () => {
     }
     return (
         <div>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-transparent">
                 <div className="hero-content">
-                    <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card w-full max-w-sm shadow-2xl ">
                         <form onSubmit={handleAddBrand} className="card-body">
-                            <h1 className="text-3xl font-bold text-center mb-4">Add Brand Details</h1>
+                            <h1 className="text-3xl font-bold text-center mb-4 text-white">Add Brand Details</h1>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Brand Name" className="input input-bordered" required />
+                                <input type="text" name="name" placeholder="Brand Name" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="photo" placeholder="Brand Image" className="input input-bordered" required />
+                                <input type="text" name="photo" placeholder="Brand Image" className="input input-bordered rounded-none text-black" required />
                             </div>
                             <div>
                                 <p className="text-red-700">{}</p>
                             </div>
                             <div className="form-control mt-2">
-                                <button className="btn btn-primary">Add Brand</button>
+                                <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white ">Add Brand</button>
                             </div>
                         </form>
                     </div>
