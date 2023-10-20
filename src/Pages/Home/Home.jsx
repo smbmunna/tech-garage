@@ -7,8 +7,7 @@ import Featured from "../../Components/Featured/Featured";
 import Special from "../../Components/Special/Special";
 
 
-const Home = () => {
-    const {handleThemeSwitch}= useContext(ProductContext)
+const Home = () => {    
     return (
         <div className="">
             <Banner className=""/>

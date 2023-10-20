@@ -1,11 +1,14 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext} from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import {ProductContext} from "../../Providers/ProductProvider"
+import { ProductContext } from "../../Providers/ProductProvider"
+
+import { FiSun ,FiMoon} from 'react-icons/fi';
+
 
 const Navbar = () => {
-    const { user, logout} = useContext(AuthContext);
-    const { handleThemeSwitch}= useContext(ProductContext)
+    const { user, logout } = useContext(AuthContext);
+    const { handleThemeSwitch, theme } = useContext(ProductContext)
 
     const handleLogout = () => {
         logout()
@@ -14,7 +17,7 @@ const Navbar = () => {
     }
 
     //handle switch
-    const changeTheme=()=>{
+    const changeTheme = () => {
         handleThemeSwitch();
     }
 
@@ -34,7 +37,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar  bg-black dark:bg-white  sticky top-0">
+        <div className="navbar  bg-black dark:bg-white  sticky top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost  lg:hidden">
@@ -57,7 +60,10 @@ const Navbar = () => {
                         <img className="w-10 mr-2" src={user?.photoURL} alt="" />
                         <span className="mr-2 dark:text-black text-white">{user?.displayName}</span>
                         <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/login'>Logout</Link>
-                        <button onClick={changeTheme} className="btn ">Light</button>
+                        {
+                            theme == "dark" ? <FiMoon className="cursor-pointer text-3xl mx-2 text-black" onClick={changeTheme} /> :
+                                <FiSun className="cursor-pointer text-3xl mx-2 text-white" onClick={changeTheme} />
+                        }
                     </>
                 }
             </div>
