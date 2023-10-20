@@ -69,7 +69,7 @@ const PhoneEntry = () => {
                             </div>
                             <div className="form-control">
                                 {/* <input type="text" name="brand" placeholder="Brand" className="input input-bordered" required /> */}
-                                <select className="form-control" value={brand} onChange={handleBrand}>
+                                <select className="form-control text-black" value={brand} onChange={handleBrand}>
                                     <option value="">Selete Brand</option>
                                     {
                                         brands.map(brand => <option key={brand._id} value={brand.name}>{brand.name}</option>)
@@ -78,7 +78,7 @@ const PhoneEntry = () => {
                             </div>
                             <div className="form-control">
                                 {/* <input type="text" name="type" placeholder="Product Type" className="input input-bordered" required /> */}
-                                <select className="form-control" value={type} onChange={handleType}>
+                                <select className="form-control text-black" value={type} onChange={handleType}>
                                     <option value="">Selete Product Type</option>
                                     {
                                         types.map(type => <option key={type.id} value={type.name}>{type.name}</option>)

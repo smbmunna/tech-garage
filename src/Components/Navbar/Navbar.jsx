@@ -15,7 +15,7 @@ const Navbar = () => {
         <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/login'>Login</Link>
         <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/register'>Register</Link>
         <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/brandEntry'>Brand Entry</Link>
-        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/addPhone'>Add Phone</Link>
+        <Link className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white" to='/addProduct'>Add Product</Link>
     </>
 
     return (
