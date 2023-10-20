@@ -3,6 +3,7 @@ import Brands from "../../Components/Brands/Brands";
 import Banner from "../../Components/Banner/Banner";
 import { useContext } from "react";
 import { ProductContext } from "../../Providers/ProductProvider";
+import Featured from "../../Components/Featured/Featured";
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             {/* <button onClick={handleThemeSwitch} className="btn">Toggle</button> */}
             <div className="max-w-6xl mx-auto">                
                 <Brands />
+                <Featured/>
             </div>
         </div>
     );
