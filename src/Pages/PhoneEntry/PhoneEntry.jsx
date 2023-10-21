@@ -62,14 +62,14 @@ const PhoneEntry = () => {
                         <form onSubmit={handleAddPhone} className="card-body">
                             <h1 className="text-3xl font-bold text-center mb-4">Add Product</h1>
                             <div className="form-control">
-                                <input type="text" name="photo" placeholder="Phone Image" className="input input-bordered  rounded-none text-black" required />
+                                <input type="text" name="photo" placeholder="Phone Image URL" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Phone Name" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="name" placeholder="Phone Name" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
                                 {/* <input type="text" name="brand" placeholder="Brand" className="input input-bordered" required /> */}
-                                <select className="form-control text-black" value={brand} onChange={handleBrand}>
+                                <select className="form-control text-gray-400 bg-gray-800 p-4" value={brand} onChange={handleBrand} required>
                                     <option value="">Selete Brand</option>
                                     {
                                         brands.map(brand => <option key={brand._id} value={brand.name}>{brand.name}</option>)
@@ -78,7 +78,7 @@ const PhoneEntry = () => {
                             </div>
                             <div className="form-control">
                                 {/* <input type="text" name="type" placeholder="Product Type" className="input input-bordered" required /> */}
-                                <select className="form-control text-black" value={type} onChange={handleType}>
+                                <select className="form-control text-gray-400 bg-gray-800 p-4" value={type} onChange={handleType} required>
                                     <option value="">Selete Product Type</option>
                                     {
                                         types.map(type => <option key={type.id} value={type.name}>{type.name}</option>)
@@ -86,35 +86,32 @@ const PhoneEntry = () => {
                                 </select>
                             </div>
                             <div className="form-control">
-                                <input type="text" name="price" placeholder="Price" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="price" placeholder="Price" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="short_description" placeholder="Short Description" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="short_description" placeholder="Short Description" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="rating" placeholder="Rating" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
 
                             <div className="form-control">
-                                <input type="text" name="announced" placeholder="Announcement Date" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="announced" placeholder="Announcement Date" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="display" placeholder="Display" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="display" placeholder="Display" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="os" placeholder="Operating System" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="os" placeholder="Operating System" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="ram" placeholder="RAM" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="ram" placeholder="RAM" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="camera" placeholder="Camera" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="camera" placeholder="Camera" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="battery" placeholder="Battery" className="input input-bordered rounded-none text-black" required />
-                            </div>
-                            <div>
-                                <p className="text-red-700">{ }</p>
+                                <input type="text" name="battery" placeholder="Battery" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control mt-2">
                                 <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white">Add Product</button>
