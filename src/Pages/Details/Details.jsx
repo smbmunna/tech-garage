@@ -35,15 +35,15 @@ const Details = () => {
             <div>
                 <img src={image} alt="" />
             </div>
-            <div className="text-white">
+            <div className="dark:text-black text-white">
                 <h1 className="text-3xl font-bold">{name}</h1>
                 <p className="mt-10">{sDescription}</p>
-                <p>Announcement: {announced}</p>
-                <p>Display: {display}</p>
-                <p>Operating System: {os}</p>
-                <p>RAM: {ram}</p>
-                <p>Camera: {camera}</p>
-                <p>Battery: {battery}</p>
+                <p><span className="font-bold mr-2">Announcement:</span> {announced}</p>
+                <p><span className="font-bold mr-2">Display:</span> {display}</p>
+                <p><span className="font-bold mr-2">Operating System:</span> {os}</p>
+                <p><span className="font-bold mr-2">RAM:</span> {ram}</p>
+                <p><span className="font-bold mr-2">Camera:</span> {camera}</p>
+                <p><span className="font-bold mr-2">Battery:</span> {battery}</p>
 
                 <button onClick={handleAddToCart} className="btn btn-primary bg-[#2c2c2c91] rounded-none  mt-8">Add To Cart</button>
             </div>
