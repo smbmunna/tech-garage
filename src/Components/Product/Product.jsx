@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Product = ({ product }) => {
     const { _id, name, image, price, sDescription, brand, type, rating } = product;
     return (
-        <div className="bg-[#2c2c2c91] shadow-xl lg:flex grid items-center text-center md:text-left px-4">
+        <div className="bg-[#2c2c2c91] shadow-xl lg:flex grid items-center text-center md:text-left px-4 my-4 py-4">
 
             <div className="mx-auto lg:mx-0">
                 <img src={image} alt="Shoes" className="rounded-xl w-48" />
@@ -13,7 +13,7 @@ const Product = ({ product }) => {
                 <h2 className="text-2xl font-semibold">{name}</h2>
                 <p>Brand: {brand}</p>
                 <p>Type: {type}</p>
-                <p>Price: {price}</p>
+                <h2 className="text-xl">Price TK: <span className="font-bold">{price}</span></h2>
                 {/* <p>Description: {sDescription}</p> */}
                 <p>Rating: {rating}</p>
                 <div className="flex gap-4 md:mx-0 mx-auto">

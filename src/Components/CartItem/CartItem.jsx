@@ -33,6 +33,7 @@ const CartItem = ({ product, cartItems, setCartItems }) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <p>{sDescription}</p>
+                    <h2 className="font-bold text-xl">TK: {price}</h2>
                     <div className="card-actions">
                         <button onClick={() => handleDeleteFromCart(_id)} className="btn btn-warning bg-red-600 text-white rounded-none border-none">Delete From Cart</button>
                     </div>
