@@ -4,6 +4,7 @@ import Banner from "../../Components/Banner/Banner";
 
 import Featured from "../../Components/Featured/Featured";
 import Special from "../../Components/Special/Special";
+import GetInTouch from "../../Components/GetInTouch/GetInTouch";
 
 
 const Home = () => {    
@@ -14,6 +15,7 @@ const Home = () => {
             <div className="max-w-6xl mx-auto">                
                 <Brands />
                 <Featured/>
+                <GetInTouch/>
                 <Special/>
             </div>
         </div>

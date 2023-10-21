@@ -10,7 +10,7 @@ const Featured = () => {
                     <p className="dark:text-gray-700 text-white font-semibold text-lg">You can choose a payment option that works for you, pay less with a trade‑in, connect your new iPhone to your carrier, and get set up quickly.
                        </p>
                 </div>
-                <div  className="lg:col-span-2">
+                <div  className="lg:col-span-2 mx-8 lg:mx-0">
                     <img src="https://i.ibb.co/yqsV5Ts/Screenshot-2023-10-20-171338.png" alt="" />
                 </div>
             </div>
