@@ -26,7 +26,7 @@ const CartItem = ({ product, cartItems, setCartItems }) => {
     }
     return (
         <div>
-            <div className="card bg-[#2c2c2c91] shadow-xl rounded-none text-white">
+            <div className="card bg-[#2c2c2c91] shadow-xl rounded-none text-white h-[450px] mb-4 mx-4 md:mb-0 md:mx-0">
                 <figure className="px-10 pt-10">
                     <img src={image} alt="Shoes" className="rounded-xl w-36" />
                 </figure>
