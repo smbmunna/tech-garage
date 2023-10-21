@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Details = () => {
+    const {user}= useContext(AuthContext);
+    const userEmail= user.email;
     const product= useLoaderData();    
     const  {_id, image, name, brand, type, price, sDescription, rating, announced,display,os, ram, camera,battery} = product; 
+    const cartProduct= {userEmail,product};
 
     //add to cart
     const handleAddToCart=()=>{
@@ -12,7 +17,7 @@ const Details = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(product)
+            body: JSON.stringify(cartProduct)
         })
         .then(res=>res.json())
         .then(data=> {
