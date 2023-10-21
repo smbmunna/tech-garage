@@ -7,8 +7,8 @@ import { AiTwotonePhone, AiOutlineDollarCircle } from "react-icons/ai";
 
 const Special = () => {
     return (
-        <div className='mx-4 md:mx-0'>
-            <h1 className="text-3xl font-bold dark:text-gray-700 text-white text-center my-8">What makes us Special</h1>
+        <div className='mx-4 md:mx-0 md:my-32'>
+            <h1 className="text-3xl font-bold dark:text-gray-700 text-white text-center my-8 md:mb-10">What makes us Special</h1>
             <div className='lg:grid lg:grid-cols-3 lg:justify-center lg:gap-28'>
                 <div className="flex gap-4 items-center mb-8 md:mb-0">
                     <div>

@@ -1,8 +1,8 @@
 
 const Featured = () => {
     return (
-        <div>
-            <h1 className="text-3xl font-bold text-white dark:text-gray-700 text-center my-8">Featured Product</h1>
+        <div className="md:my-20">
+            <h1 className="text-3xl font-bold text-white dark:text-gray-700 text-center my-8 md:mb-10">Featured Product</h1>
             <div className="lg:grid lg:grid-cols-4  lg:items-center lg:gap-10">
                 <div className="lg:col-span-2 mx-4 text-center md:text-left mb-4 md:mb-0 md:mx-0">
                     <h1 className="font-bold text-5xl dark:text-gray-700 text-white mb-20 text-center md:text-left">iPhone 15 Pro Max</h1>
