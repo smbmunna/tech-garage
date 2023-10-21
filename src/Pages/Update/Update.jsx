@@ -40,7 +40,7 @@ const Update = () => {
         const updatedProduct = { image, name, brand, type, price, sDescription, rating, announced,display,os, ram, camera,battery};
 
         //update 
-        fetch(`https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/product/${_id}`,{
+        fetch(`https://tech-garage-server.vercel.app/product/${_id}`,{
             method:'PUT',
             headers:{
                 'content-type': 'application/json'

@@ -6,7 +6,7 @@ const BrandEntry = () => {
         const name= form.name.value;
         const photo= form.photo.value;
         const brand= {name, photo};
-        fetch('https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/brands',{
+        fetch('https://tech-garage-server.vercel.app/brands',{
             method:"POST",
             headers: {
                 'content-type': 'application/json'

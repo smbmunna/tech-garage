@@ -7,7 +7,7 @@ const Details = () => {
 
     //add to cart
     const handleAddToCart=()=>{
-        fetch('https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/cart',{
+        fetch('https://tech-garage-server.vercel.app/cart',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

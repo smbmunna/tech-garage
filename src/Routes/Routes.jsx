@@ -41,23 +41,23 @@ const router = createBrowserRouter([
             {
                 path: '/brand/:brand',
                 element: <Products />,
-                loader: ({ params }) => fetch(`https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/brand/${params.brand}`)
+                loader: ({ params }) => fetch(`https://tech-garage-server.vercel.app/brand/${params.brand}`)
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute><Details /></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://tech-garage-server.vercel.app/details/${params.id}`)
 
             },
             {
                 path: '/myCart',
                 element: <PrivateRoute><MyCart /></PrivateRoute>,
-                loader: () => fetch('https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/cart')
+                loader: () => fetch('https://tech-garage-server.vercel.app/cart')
             },
             {
                 path: '/update/:id',
                 element: <PrivateRoute> <Update /></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://tech-garage-server-ad3y9riqt-mahmud-munnas-projects.vercel.app/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://tech-garage-server.vercel.app/details/${params.id}`)
             }
         ]
     },

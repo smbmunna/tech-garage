@@ -1,8 +1,7 @@
 import Header from "../../Components/Header/Header";
 import Brands from "../../Components/Brands/Brands";
 import Banner from "../../Components/Banner/Banner";
-import { useContext } from "react";
-import { ProductContext } from "../../Providers/ProductProvider";
+
 import Featured from "../../Components/Featured/Featured";
 import Special from "../../Components/Special/Special";
 

@@ -1,9 +1,9 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { ProductContext } from "../../Providers/ProductProvider"
 
-import { FiSun ,FiMoon} from 'react-icons/fi';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
 
 const Navbar = () => {
@@ -60,11 +60,12 @@ const Navbar = () => {
                         <img className="w-10 mr-2" src={user?.photoURL} alt="" />
                         <span className="mr-2 dark:text-black text-white">{user?.displayName}</span>
                         <Link onClick={handleLogout} className="btn btn-primary bg-[#2c2c2c91] dark:bg-slate-300 dark:text-black dark:border-none rounded-none text-white" to='/login'>Logout</Link>
-                        {
-                            theme == "dark" ? <FiMoon className="cursor-pointer text-3xl mx-2 text-black" onClick={changeTheme} /> :
-                                <FiSun className="cursor-pointer text-3xl mx-2 text-white" onClick={changeTheme} />
-                        }
                     </>
+                }
+                
+                {
+                    theme == "dark" ? <FiMoon className="cursor-pointer text-3xl mx-2 text-black" onClick={changeTheme} /> :
+                        <FiSun className="cursor-pointer text-3xl mx-2 text-white" onClick={changeTheme} />
                 }
             </div>
         </div>
