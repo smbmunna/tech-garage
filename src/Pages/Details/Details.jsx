@@ -12,7 +12,7 @@ const Details = () => {
 
     //add to cart
     const handleAddToCart=()=>{
-        fetch('https://tech-garage-server.vercel.app/cart',{
+        fetch('http://localhost:5000/cart',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

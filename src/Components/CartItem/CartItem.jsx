@@ -1,22 +1,25 @@
 import Swal from "sweetalert2";
 
 const CartItem = ({ product, cartItems, setCartItems }) => {
-    const { _id, name, image, price, sDescription, } = product.product;;
+    
+    const { _id, name, image, price, sDescription, } = product.product;
     //delete from cart
     const handleDeleteFromCart = (id) => {
-        fetch(`https://tech-garage-server.vercel.app/delete/cart/${id}`, {
+        fetch(`http://localhost:5000/delete/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 if (data.deletedCount > 0) {
                     Swal.fire(
                         'Success!',
                         'Product has been Removed From Your Cart!',
                         'success'
                     )
-                    const remainingItems = cartItems.filter(item => item._id != _id);
-                    setCartItems(remainingItems);;
+                    const remainingItems = cartItems.filter(item => item.product._id != _id);
+                    console.log(remainingItems);
+                    setCartItems(remainingItems);
                 }
 
             })

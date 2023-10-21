@@ -8,15 +8,14 @@ const MyCart = () => {
     const currentEmail= user.email;
     const loadedCartItems = useLoaderData();    
     const userCart= loadedCartItems.filter(cart=>cart.userEmail==currentEmail);
-    const currentUsersCart= userCart;
-    const [cartItems, setCartItems]= useState(currentUsersCart);
+    const [cartItems, setCartItems]= useState(userCart);
     
     return (
         <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl font-bold text-center my-8 text-white">My Cart</h1>
             <div className="md:grid md:grid-cols-3 lg:grid-cols-3 justify-center gap-10 mx-auto">
                 {
-                    currentUsersCart.map(cartItem => <CartItem key={cartItem._id} product={cartItem} cartItems={cartItems.product} setCartItems={setCartItems} />)
+                    cartItems.map(cartItem => <CartItem key={cartItem._id} product={cartItem} cartItems={cartItems} setCartItems={setCartItems} />)
                 }
             </div>
         </div>
