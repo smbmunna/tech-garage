@@ -47,10 +47,10 @@ const Navbar = () => {
                         {links}
                     </ul>
                 </div>
-                <Link to='/' className="flex gap-2 items-center">
-                    <img className="w-16 hidden md:block" src="https://i.ibb.co/bFR69mg/2.png" alt="" />
-                    <Link to="/"><h2 className="text-base md:text-xl text-white dark:text-black font-bold">Tech Garage</h2></Link>
-                </Link>
+                <div className="flex gap-2 items-center">
+                    <Link to='/'><img className="w-16 hidden md:block" src="https://i.ibb.co/bFR69mg/2.png" alt="" /></Link>
+                    <Link to="/"><h2 className="text-base md:text-xl text-white dark:text-black font-bold">Tech Garage</h2></Link>                    
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 gap-2">

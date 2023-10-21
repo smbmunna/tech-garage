@@ -67,14 +67,14 @@ const Update = () => {
                             <form onSubmit={handleUpdateProduct} className="card-body">
                                 <h1 className="text-3xl font-bold text-center mb-4">Update Product: {name}</h1>
                                 <div className="form-control">
-                                    <input type="text" name="photo" defaultValue={image} placeholder="Product Image" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="photo" defaultValue={image} placeholder="Product Image" className="input input-bordered rounded-none  text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="name" defaultValue={name} placeholder="Product Name" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="name" defaultValue={name} placeholder="Product Name" className="input input-bordered rounded-none  text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
                                     {/* <input type="text" name="brand" placeholder="Brand" className="input input-bordered" required /> */}
-                                    <select className="form-control text-black" value={brand} onChange={handleBrand}>
+                                    <select className="form-control text-gray-400 bg-gray-800 p-4" value={brand} onChange={handleBrand}>
                                         <option value="">Selete Brand</option>
                                         {
                                             brands.map(brand => <option key={brand._id} value={brand.name}>{brand.name}</option>)
@@ -83,7 +83,7 @@ const Update = () => {
                                 </div>
                                 <div className="form-control">
                                     {/* <input type="text" name="type" placeholder="Product Type" className="input input-bordered" required /> */}
-                                    <select className="form-control text-black" value={type} onChange={handleType}>
+                                    <select className="form-control text-gray-400 bg-gray-800 p-4" value={type} onChange={handleType}>
                                         <option value="">Selete Product Type</option>
                                         {
                                             types.map(type => <option key={type.id} value={type.name}>{type.name}</option>)
@@ -91,32 +91,32 @@ const Update = () => {
                                     </select>
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="price" defaultValue={price} placeholder="Price" className="input input-bordered rounded-none  text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="short_description" defaultValue={sDescription} placeholder="Short Description" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="short_description" defaultValue={sDescription} placeholder="Short Description" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="rating" placeholder="Rating" defaultValue={rating} className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="rating" placeholder="Rating" defaultValue={rating} className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
 
                                 <div className="form-control">
-                                    <input type="text" name="announced" defaultValue={announced} placeholder="Announcement Date" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="announced" defaultValue={announced} placeholder="Announcement Date" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="display" defaultValue={display} placeholder="Display" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="display" defaultValue={display} placeholder="Display" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="os" defaultValue={os} placeholder="Operating System" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="os" defaultValue={os} placeholder="Operating System" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="ram" defaultValue={ram} placeholder="RAM" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="ram" defaultValue={ram} placeholder="RAM" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="camera" defaultValue={camera} placeholder="Camera" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="camera" defaultValue={camera} placeholder="Camera" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" name="battery" defaultValue={battery} placeholder="Battery" className="input input-bordered rounded-none text-black" required />
+                                    <input type="text" name="battery" defaultValue={battery} placeholder="Battery" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                                 </div>
                                 <div>
                                     <p className="text-red-700">{ }</p>

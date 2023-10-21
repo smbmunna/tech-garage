@@ -67,8 +67,7 @@ const PhoneEntry = () => {
                             <div className="form-control">
                                 <input type="text" name="name" placeholder="Phone Name" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
-                            <div className="form-control">
-                                {/* <input type="text" name="brand" placeholder="Brand" className="input input-bordered" required /> */}
+                            <div className="form-control">                                
                                 <select className="form-control text-gray-400 bg-gray-800 p-4" value={brand} onChange={handleBrand} required>
                                     <option value="">Selete Brand</option>
                                     {
@@ -76,8 +75,7 @@ const PhoneEntry = () => {
                                     }
                                 </select>
                             </div>
-                            <div className="form-control">
-                                {/* <input type="text" name="type" placeholder="Product Type" className="input input-bordered" required /> */}
+                            <div className="form-control">                                
                                 <select className="form-control text-gray-400 bg-gray-800 p-4" value={type} onChange={handleType} required>
                                     <option value="">Selete Product Type</option>
                                     {

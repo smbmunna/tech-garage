@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 
 const BrandEntry = () => {
     const handleAddBrand=event=>{
@@ -15,7 +16,13 @@ const BrandEntry = () => {
         })
         .then(res=> res.json())
         .then(data=>{
-            console.log(data);
+            if(data.insertedId){
+                Swal.fire(
+                    'Success!',
+                    'Brand Added!',
+                    'success'
+                  )
+            }
         })
     }
     return (
@@ -24,12 +31,12 @@ const BrandEntry = () => {
                 <div className="hero-content">
                     <div className="card w-full max-w-sm shadow-2xl ">
                         <form onSubmit={handleAddBrand} className="card-body">
-                            <h1 className="text-3xl font-bold text-center mb-4 text-white">Add Brand Details</h1>
+                            <h1 className="text-3xl font-bold text-center mb-4 dark:text-black text-white">Add Brand Details</h1>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Brand Name" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="name" placeholder="Brand Name" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="photo" placeholder="Brand Image" className="input input-bordered rounded-none text-black" required />
+                                <input type="text" name="photo" placeholder="Brand Image" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div>
                                 <p className="text-red-700">{}</p>
