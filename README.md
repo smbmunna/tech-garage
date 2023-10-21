@@ -5,7 +5,7 @@
 
 **[ Server Private Repo Link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-smbmunna)**
 <br>
-**[ Server Live Link](http://localhost:5000/)**
+**[ Server Live Link](https://tech-garage-server.vercel.app/)**
 
 
 ##  Project Features: 

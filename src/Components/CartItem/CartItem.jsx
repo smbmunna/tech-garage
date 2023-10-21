@@ -5,7 +5,7 @@ const CartItem = ({ product, cartItems, setCartItems }) => {
     const { _id, name, image, price, sDescription, } = product.product;
     //delete from cart
     const handleDeleteFromCart = (id) => {
-        fetch(`http://localhost:5000/delete/cart/${id}`, {
+        fetch(`https://tech-garage-server.vercel.app/delete/cart/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
