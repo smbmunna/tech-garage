@@ -62,10 +62,10 @@ const PhoneEntry = () => {
                         <form onSubmit={handleAddPhone} className="card-body">
                             <h1 className="text-3xl font-bold text-center mb-4">Add Product</h1>
                             <div className="form-control">
-                                <input type="text" name="photo" placeholder="Phone Image URL" className="input input-bordered  rounded-none text-white bg-gray-800" required />
+                                <input type="text" name="photo" placeholder="Product Image URL" className="input input-bordered  rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">
-                                <input type="text" name="name" placeholder="Phone Name" className="input input-bordered rounded-none text-white bg-gray-800" required />
+                                <input type="text" name="name" placeholder="Product Name" className="input input-bordered rounded-none text-white bg-gray-800" required />
                             </div>
                             <div className="form-control">                                
                                 <select className="form-control text-gray-400 bg-gray-800 p-4" value={brand} onChange={handleBrand} required>

@@ -39,14 +39,16 @@ const Slider = () => {
         ]
     )
     return (
-        <div ref={sliderRef} className="keen-slider mb-10">
-            <div className="keen-slider__slide number-slide1">                
-            </div>
-            <div className="keen-slider__slide number-slide2">                
-            </div>
-            <div className="keen-slider__slide number-slide3">                
-            </div>
-            <div className="keen-slider__slide number-slide4">                
+        <div className="w-5/6 mx-auto md:w-full md:mx-0">
+            <div ref={sliderRef} className="keen-slider mb-10">
+                <div className="keen-slider__slide number-slide1">
+                </div>
+                <div className="keen-slider__slide number-slide2">
+                </div>
+                <div className="keen-slider__slide number-slide3">
+                </div>
+                <div className="keen-slider__slide number-slide4">
+                </div>
             </div>
         </div>
     );
