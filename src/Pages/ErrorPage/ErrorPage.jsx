@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
     return (
-        <div className="h-screen flex items-center justify-center text-center text-white">
+        <div className="h-screen flex items-center justify-center text-center text-white bg-[url('https://i.ibb.co/3ch67TH/symbol-scatter-haikei-1.png')]">
             <div className="">
                 <h1 className="text-5xl font-bold mb-10">Error 404!</h1>
                 <h1 className="text-3xl font-bold">Opps! Page Not Found</h1>

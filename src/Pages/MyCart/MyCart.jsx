@@ -11,7 +11,7 @@ const MyCart = () => {
     const [cartItems, setCartItems]= useState(userCart);
     
     return (
-        <div className="max-w-6xl mx-auto">
+        <div className="h-screen  max-w-6xl mx-auto">
             <h1 className="text-3xl font-bold text-center my-8 dark:text-black text-white">My Cart</h1>
             <div className="md:grid md:grid-cols-3 lg:grid-cols-3 justify-center gap-10 mx-auto">
                 {

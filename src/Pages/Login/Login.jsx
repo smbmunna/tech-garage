@@ -60,7 +60,7 @@ const Login = () => {
                                 <p>Don't have Account? <Link className="font-bold text-blue-500" to="/register">Register</Link></p>
                             </div>
                             <div>
-                                <p className="text-red-700">{loginError}</p>
+                                <p className="text-red-500 text-lg">{loginError}</p>
                             </div>
                             <div className="form-control mt-2">
                                 <button className="btn btn-primary bg-[#2c2c2c91] rounded-none text-white ">Login</button>

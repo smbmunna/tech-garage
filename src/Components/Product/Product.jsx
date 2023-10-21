@@ -16,7 +16,7 @@ const Product = ({ product }) => {
                 <p>Price: {price}</p>
                 {/* <p>Description: {sDescription}</p> */}
                 <p>Rating: {rating}</p>
-                <div className="flex gap-4 mx-auto">
+                <div className="flex gap-4 md:mx-0 mx-auto">
                     <div className="card-actions">
                         <Link to={`/details/${_id}`} className="btn btn-primary bg-[#2c2c2c91] rounded-none px-2">Details</Link>
                     </div>
