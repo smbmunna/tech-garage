@@ -1,12 +1,18 @@
 # Mahmuds Tech Garage
-**[ Client Private Repo Link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-smbmunna)**
+**[ Client Github Link](https://github.com/smbmunna/tech-garage)**
 <br>
 **[ Client Live Link](https://tech-garage-9e1a9.web.app)**
 
-**[ Server Private Repo Link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-smbmunna)**
+**[ Server Github Link](https://github.com/smbmunna/tech-garage-server)**
 <br>
 **[ Server Live Link](https://tech-garage-server.vercel.app/)**
 
+##  Project Overview: 
+#### An online gadget shop where: 
+-  User can create their own account. 
+- Choose their favorite brands. 
+- Add desired gadgets to their cart. 
+- Admin can add new products to the product database. 
 
 ##  Project Features: 
 
