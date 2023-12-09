@@ -1,10 +1,8 @@
 # Mahmuds Tech Garage
-**[ Client Github Link](https://github.com/smbmunna/tech-garage)**
-<br>
+**[ Client Github Link](https://github.com/smbmunna/tech-garage)** ||
 **[ Client Live Link](https://tech-garage-9e1a9.web.app)**
 
-**[ Server Github Link](https://github.com/smbmunna/tech-garage-server)**
-<br>
+**[ Server Github Link](https://github.com/smbmunna/tech-garage-server)** ||
 **[ Server Live Link](https://tech-garage-server.vercel.app/)**
 
 ##  Project Overview: 
